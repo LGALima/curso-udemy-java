@@ -13,7 +13,7 @@ public static void main(String[] args) {
 	
 	StatusPedido sp1 = StatusPedido.ENTREGUE;
 	
-	StatusPedido sp2 = StatusPedido.valueOf("ENTREGUE"); //como entrar um enum com string
+	StatusPedido sp2 = StatusPedido.valueOf("ENTREGUE"); //como entrar um enum com string 
 	
 	System.out.println(sp1);
 	System.out.println(sp2);
