@@ -25,4 +25,10 @@ public class BusinessAccount extends Account{
 		if(quantidade <= limiteEmprestimo)
 			deposito(quantidade);
 	} 
+	
+	@Override
+	public void saque(Double quantidade) {
+		super.saque(quantidade);
+		saldo -= 2;
+	}
 }
