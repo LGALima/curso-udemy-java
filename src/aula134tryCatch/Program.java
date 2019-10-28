@@ -5,7 +5,20 @@ import java.util.Scanner;
 
 public class Program {
 	public static void main(String[] args) {
+		System.out.println("*****method2 start******");
+		method1();
 		
+		System.out.println("Deu certo!");
+	}
+	
+	public static void method1() {
+		System.out.println("*****method1 start******");
+		method2();
+		System.out.println("*****method1 finish*****");
+
+	}
+	
+	public static void method2() {
 		Scanner sc = new Scanner(System.in);
 		
 		try {
@@ -15,11 +28,13 @@ public class Program {
 		System.out.println(vetor[position]);
 		} catch (ArrayIndexOutOfBoundsException e) {
 			System.out.println("Invalid position!");
+			e.printStackTrace();
+			sc.next();
 		} catch (InputMismatchException e) {
 			System.out.println("Input error");
 		}
-		
-		System.out.println("Deu certo!");
 		sc.close();
+		System.out.println("******method2 finish*****");
 	}
+	
 }
