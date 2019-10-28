@@ -1,6 +1,6 @@
 package aula121herenca.entities;
 
-public class Account {
+public abstract class Account {
 
 	private Integer numero;
 	private String titular;
