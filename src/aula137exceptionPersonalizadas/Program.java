@@ -11,16 +11,16 @@ public class Program {
 	public static void main(String[] args) throws ParseException {
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		
+
 		System.out.print("Numero do quarto: ");
 		int numero = sc.nextInt();
 		System.out.print("data do check-in (dd/MM/yyyy): ");
 		Date checkin = sdf.parse(sc.next());
 		System.out.print("data do check-out (dd/MM/yyyy): ");
 		Date checkout = sdf.parse(sc.next());
-		
+
 		if (!checkout.after(checkin)) {
-			System.out.println("Erro ao reservar: Check-out deve ser depois de Check-in");			
+			System.out.println("Erro ao reservar: Check-out deve ser depois de Check-in");
 		} else {
 			Reserva reserva = new Reserva(numero, checkin, checkout);
 			System.out.println("Reserva: " + reserva);
@@ -30,15 +30,12 @@ public class Program {
 			checkin = sdf.parse(sc.next());
 			System.out.print("data do check-out (dd/MM/yyyy): ");
 			checkout = sdf.parse(sc.next());
-			
-			Date now = new Date();
-			if(checkin.before(now) || checkout.before(now)) {
-				System.out.println("Erro na reserva: a reserva deve ser em uma data futura");
-			} else if(checkin.after(now)) {
-				System.out.println("Erro ao reservar: Check-out deve ser depois de Check-in");			
+
+			String error = reserva.updateDates(checkin, checkout);
+			if(error !=null) {
+				System.out.println("Erro na reserva: " + error);				
 			} else {
-				reserva.updateDates(checkin, checkout);
-				System.out.println("Reserva: " + reserva);
+				System.out.println("Reserva: " + reserva);				
 			}
 		}
 		sc.close();
