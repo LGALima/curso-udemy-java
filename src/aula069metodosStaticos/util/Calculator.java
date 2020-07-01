@@ -1,4 +1,4 @@
-package aula69metodosStaticos.util;
+package aula069metodosStaticos.util;
 
 public class Calculator {
 	public static final double PI = 3.141559;

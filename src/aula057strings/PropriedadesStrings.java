@@ -1,4 +1,4 @@
-package aula57strings;
+package aula057strings;
 
 public class PropriedadesStrings {
 

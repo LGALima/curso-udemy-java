@@ -1,9 +1,9 @@
-package aula69metodosStaticos;
+package aula069metodosStaticos;
 
 import java.util.Locale;
 import java.util.Scanner;
 
-import aula69metodosStaticos.util.Calculator;
+import aula069metodosStaticos.util.Calculator;
 
 public class Program {
 	
