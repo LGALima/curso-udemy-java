@@ -19,7 +19,6 @@ public class Program {
 //		List<String> name = list.stream().map(new UpperCaseName()).collect(Collectors.toList());
 //		List<String> name = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
 //		List<String> name = list.stream().map(Product::nonStaticUpperCaseName).collect(Collectors.toList());
-		
 //		Function<Product, String> func = p -> p.getName().toUpperCase();
 //		List<String> name = list.stream().map(func).collect(Collectors.toList());
 		
